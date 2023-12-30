@@ -1,0 +1,31 @@
+#wah-admin-helper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: rebeccapurple;
+  z-index: 2;
+  color: white;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 8px 1rem;
+  border-radius: 5px;
+  gap: 8px;
+  box-sizing: border-box;
+  height: 40px;
+}
+
+#wah-admin-helper button {
+  border: none;
+}
+
+#wah-admin-helper div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#wah-admin-helper-left {
+  display: flex;
+  align-items: center;
+}

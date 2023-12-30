@@ -13,23 +13,36 @@ defined('ABSPATH') or die('No script kiddies please!');
 
 require_once plugin_dir_path(__FILE__) . 'wah-options.php';
 
+function wah_get_show_status()
+{
+    $status = get_option('mm_wp_admin_helper');
+    return $status;
+}
+
+
+
+
 
 
 add_action('init', 'mm_load_files_for_admin');
-
 function mm_load_files_for_admin()
 {
+    require_once plugin_dir_path(__FILE__) . 'wah-admin.php';
     if (wah_is_admin_logged_in()) {
-        require_once plugin_dir_path(__FILE__) . 'icons/icons.php';
-        require_once plugin_dir_path(__FILE__) . 'wah-trigger.php';
-        require_once plugin_dir_path(__FILE__) . 'wah-main-container.php';
-        require_once plugin_dir_path(__FILE__) . 'wah-shortcuts.php';
-        require_once plugin_dir_path(__FILE__) . 'wah-tools-main-container.php';
-        require_once plugin_dir_path(__FILE__) . 'tools/content-formater-tool.php';
-        require_once plugin_dir_path(__FILE__) . 'tools/seo-tools.php';
-        require_once plugin_dir_path(__FILE__) . 'tools/prism-creator-tool.php';
 
-        add_action('wp_enqueue_scripts', 'wah_load_css_js', 100);
+        $wah_is_active = wah_get_show_status();
+        if ($wah_is_active == 'active') {
+            require_once plugin_dir_path(__FILE__) . 'icons/icons.php';
+            require_once plugin_dir_path(__FILE__) . 'wah-trigger.php';
+            require_once plugin_dir_path(__FILE__) . 'wah-main-container.php';
+            require_once plugin_dir_path(__FILE__) . 'wah-shortcuts.php';
+            require_once plugin_dir_path(__FILE__) . 'wah-tools-main-container.php';
+            require_once plugin_dir_path(__FILE__) . 'tools/content-formater-tool.php';
+            require_once plugin_dir_path(__FILE__) . 'tools/seo-tools.php';
+            require_once plugin_dir_path(__FILE__) . 'tools/prism-creator-tool.php';
+
+            add_action('wp_enqueue_scripts', 'wah_load_css_js', 100);
+        }
     }
 }
 
@@ -139,3 +152,10 @@ function wah_is_admin_logged_in()
         return true;
     }
 }
+
+
+
+//wah admin css
+add_action('admin_enqueue_scripts', function () {
+    wp_enqueue_style('wah-admin-style', plugin_dir_url(__FILE__) . 'wah-admin.css', array(), wah_plugin_version(), 'all');
+});
