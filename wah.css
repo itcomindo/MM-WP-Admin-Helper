@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;800;900&family=Rajdhani:wght@300;500;600;700&display=swap");
+
+:root {
+  --wah-color-dark-1: #4b4b4b;
+  --wah-color-dark-2: #3e3e3e;
+  --wah-color-dark-3: #333333;
+  --wah-color-dark-4: #282828;
+  --wah-color-dark-5: #202020;
+  --wah-color-background: #141414;
+  --wah-color-text: #f0f0f0;
+  --wah-color-light-1: #cecece;
+  --wah-color-light-2: #b2b2b2;
+  --wah-color-accent-1: darkred;
+  --wah-color-accent-2: #006f00;
+  --wah-color-accent-3: #0000bc;
+  --wah-color-accent-4: #b8bc00;
+  --wah-font-text: "Mulish", sans-serif;
+  --wah-font-display: "Rajdhani", sans-serif;
+  --wah-font-size-1: 14px;
+  --wah-font-size-2: 16px;
+  --wah-font-size-3: 18px;
+}
+
+.wah-cursor-pointer {
+  cursor: pointer;
+}
+
+.wah {
+  background-color: var(--wah-color-background);
+  color: var(--wah-color-text);
+  font-size: var(--wah-font-size-1);
+}
+
+.wah-head {
+  font-size: 1.2rem;
+}
+
+.wah-borad-50 {
+  border-radius: 50%;
+}
+
+.wah-close {
+  position: absolute;
+  color: var(--wah-color-text);
+  width: 40px !important;
+  height: 40px !important;
+  top: 0;
+  right: 0;
+}
+
+.wah ul,
+.wah ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.wah div,
+.wah li {
+  width: 100%;
+  font-size: var(--wah-font-size-1);
+  box-sizing: border-box;
+  color: var(--wah-color-text);
+  font-family: var(--wah-font-text);
+}
+
+.wah textarea,
+.wah input,
+.wah select,
+.wah button,
+.wah label {
+  box-sizing: border-box;
+}
+.wah ul.wah-no-border li {
+  border-bottom: none;
+  margin-bottom: unset;
+}
+.wah label {
+  color: var(--wah-color-text);
+}
+
+.wah li {
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+  padding: 2px 0;
+  margin-bottom: 4px;
+}
+.wah li:not("wah-box-tool") {
+  padding: 2px 0 2px 0;
+  margin-bottom: 4px;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+}
+.wah li a {
+  width: 100%;
+  display: block;
+}
+
+.wah li:not("wah-box-tool"):last-child {
+  border-bottom: none;
+}
+.wah li:hover svg {
+  fill: var(--wah-color-accent-1);
+}
+.wah h2,
+.wah h3,
+.wah h4 {
+  font-family: var(--wah-font-display);
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.3;
+  color: var(--wah-color-text);
+}
+
+.wah a:hover {
+  color: var(--wah-color-accent-1);
+}
+.wah a {
+  color: var(--wah-color-text);
+  text-decoration: none;
+}
+
+.wah-fixed {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 88;
+  width: 300px;
+  padding: 3rem 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.wah svg:hover {
+  fill: var(--wah-color-accent-1);
+}
+.wah svg {
+  fill: var(--wah-color-text);
+  width: 24px;
+  height: 24px;
+}
+.wah-trigger-button {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.wah-trigger-button:hover {
+  color: var(--wah-color-accent-1);
+}
+#wah-bot {
+  background-color: var(--wah-color-dark-4);
+  display: flex;
+  flex-direction: column;
+  gap: 0.33rem;
+}
+.wah-shortcuts {
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+  padding: 4px;
+}
+ul#tool-item-wr li {
+  cursor: pointer;
+}
+ul#tool-item-wr li a:hover {
+  color: var(--wah-color-accent-1);
+}
+/**
+=========================
+* wah trigger
+*=========================
+*/
+
+#wah-trigger {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--wah-color-background);
+  color: var(--wah-color-text);
+  padding: 0;
+  font-size: 1.5rem;
+}
+
+.wah-shortcut-trigger {
+  cursor: pointer;
+  padding: 2px 4px 2px 0.5rem;
+}
+.wah-shortcut-container {
+  padding: 8px 12px;
+}
+/**
+=========================
+* wah Container
+*=========================
+*/
+
+ul.wah-box-tool-wr {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(calc(100% / 4), 1fr));
+  gap: 0.5rem;
+}
+
+li.wah-box-tool {
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.33rem;
+  padding-bottom: 0.33rem;
+  cursor: pointer;
+}
+.wah-post-shortcuts {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.wah-shortcut-trigger {
+  background-color: var(--wah-color-dark-3);
+  cursor: pointer;
+  padding: 4px;
+}
+.wah-shortcut-trigger.active {
+  background-color: var(--wah-color-accent-1);
+}
+.wah-shortcut-trigger:hover {
+  background-color: var(--wah-color-accent-2);
+}
+
+.wah-shortcut-container.active {
+  display: block;
+  visibility: visible;
+}
+.wah-shortcut-container.inactive {
+  display: none;
+  visibility: hidden;
+}
+.wah-shortcut-container ul li:last-child {
+  border-bottom: none;
+  margin-bottom: unset;
+}
+
+/**
+=========================
+* wah-content-formater
+*=========================
+*/
+
+.wah-tools-wr::-webkit-scrollbar {
+  width: 5px;
+  background-color: var(--wah-color-accent-2);
+}
+.wah-tools-wr {
+  position: fixed;
+  margin-top: -300px;
+  top: 50%;
+  left: 50%;
+  min-width: 100px;
+  max-width: 600px;
+  padding: 1.5rem;
+  z-index: 99999;
+  overflow: auto;
+}
+.wah-trigger-close {
+  width: 15px !important;
+  height: 15px !important;
+  background-color: var(--wah-color-accent-1);
+  border-radius: 50%;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+.wah-trigger-close:hover {
+  background-color: red;
+}
+
+.wah-tools-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.tools-player {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+ul.wah-box-wr {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+ul.wah-box-wr li:hover {
+  background-color: var(--wah-color-accent-2);
+}
+ul.wah-box-wr li {
+  padding: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+/**
+=========================
+* SEO Tools
+*=========================
+*/
+
+.wah-h100 {
+  height: 100vh;
+}
+#wah-seo-tools {
+  padding-top: 2rem;
+  top: 0;
+  left: 0;
+  transform: translate(0, 0);
+}
+
+#wah-seo-tools ul li {
+  cursor: pointer;
+}
