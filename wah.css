@@ -284,6 +284,7 @@ li.wah-box-tool {
 .wah-tools-box {
   display: flex;
   flex-direction: column;
+  z-index: 100;
 }
 
 .tools-player {
@@ -312,6 +313,13 @@ ul.wah-box-wr li {
   justify-content: center;
   cursor: pointer;
   font-size: 10px;
+}
+
+.wah-button-wr {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  align-items: center;
+  gap: 1rem;
 }
 
 /**

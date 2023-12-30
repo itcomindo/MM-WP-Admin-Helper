@@ -44,7 +44,7 @@ function wah_content_formater_tool()
                 <label for="wah-content-formater-content-result">Hasil</label>
                 <textarea name="wah-content-formater-content-result" id="wah-content-formater-content-result" cols="30" rows="3"></textarea>
             </div>
-            <div class="wah-tools-box">
+            <div class="wah-tools-box wah-button-wr">
                 <button id="wah-copy">Copy</button>
                 <button id="wah-reset">Reset</button>
             </div>
