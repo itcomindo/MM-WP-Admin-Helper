@@ -20,6 +20,11 @@ function wah_container()
 
         <!-- wah bot -->
         <div id="wah-bot">
+            <div class="wah-shortcuts wah-bg-important">
+                <ul class="wah-no-border">
+                    <li><a href="/wp-admin/">Go to Admin</a></li>
+                </ul>
+            </div>
             <?php
             wah_post_shortcuts();
             wah_page_shortcuts();

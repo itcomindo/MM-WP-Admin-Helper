@@ -2,6 +2,35 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     jQuery(function () {
 
+        // PRISM CREATOR TOOL START
+
+        jQuery('#wah-prism').slideUp();
+
+
+        function wahCallPrismCreatorTool() {
+            jQuery('#wah-call-prism-creator-tool').click(function () {
+                var $wahPrism = jQuery('#wah-prism');
+                $wahPrism.slideDown();
+                jQuery('#wah-main-container').slideUp();
+                jQuery('#tools-main-container').slideUp();
+                jQuery('#wah-trigger').slideUp();
+            });
+        }
+        wahCallPrismCreatorTool();
+
+        function wahPrismCreatorToolClose() {
+            jQuery('#wah-prism-close').click(function () {
+                var $wahPrism = jQuery('#wah-prism');
+                $wahPrism.slideUp();
+                jQuery('#tools-main-container').slideDown();
+                jQuery('#wah-trigger').slideDown();
+            });
+        }
+        wahPrismCreatorToolClose();
+
+
+        // PRISM CREATOR TOOL END
+
 
 
 

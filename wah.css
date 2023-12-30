@@ -321,7 +321,9 @@ ul.wah-box-wr li {
   align-items: center;
   gap: 1rem;
 }
-
+ul.wah-cursor li {
+  cursor: pointer;
+}
 /**
 =========================
 * SEO Tools
@@ -340,4 +342,27 @@ ul.wah-box-wr li {
 
 #wah-seo-tools ul li {
   cursor: pointer;
+}
+.wah-bg-important {
+  background-color: var(--wah-color-accent-2) !important;
+}
+/**
+=========================
+* Prism
+*=========================
+*/
+#wah-prism {
+  min-width: 300px;
+  width: 600px;
+  max-width: 600px;
+  padding: 1.5rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+ul#wah-prism-items-wr {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
 }

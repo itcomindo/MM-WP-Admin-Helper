@@ -18,7 +18,7 @@ function wah_tools_main_container()
         <ul id="tool-item-wr">
             <li id="wah-call-content-formater">Content Formater</li>
             <li id="wah-call-seo-tools">SEO Tools</li>
-            <li>Prism Creator</li>
+            <li id="wah-call-prism-creator-tool">Prism Creator</li>
             <li>HTML Entity</li>
         </ul>
 

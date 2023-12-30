@@ -27,6 +27,7 @@ function mm_load_files_for_admin()
         require_once plugin_dir_path(__FILE__) . 'wah-tools-main-container.php';
         require_once plugin_dir_path(__FILE__) . 'tools/content-formater-tool.php';
         require_once plugin_dir_path(__FILE__) . 'tools/seo-tools.php';
+        require_once plugin_dir_path(__FILE__) . 'tools/prism-creator-tool.php';
 
         add_action('wp_enqueue_scripts', 'wah_load_css_js', 100);
     }
@@ -119,6 +120,9 @@ function wah_load_css_js()
 
     // seo tools
     wp_enqueue_script('wah-seo-tools-scripts', plugin_dir_url(__FILE__) . 'tools/seo-tools.js', array('jquery'), wah_plugin_version(), true);
+
+    // prism creator
+    wp_enqueue_script('wah-prism-creator-scripts', plugin_dir_url(__FILE__) . 'tools/prism-creator-tool.js', array('jquery'), wah_plugin_version(), true);
 }
 // add_action('wp_enqueue_scripts', 'wah_load_css_js', 100);
 
