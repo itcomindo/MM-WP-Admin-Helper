@@ -42,6 +42,32 @@ function wah_container()
 }
 
 add_action('wp_footer', 'wah_container', 100);
+// add_action('admin_footer', 'wah_container');
+
+function wah_maih_container_in_backend()
+{
+    $enable_wah_in_backend = carbon_get_theme_option('wah_backend');
+    if ($enable_wah_in_backend) {
+        add_action('admin_footer', 'wah_container', 100);
+    }
+}
+add_action('init', 'wah_maih_container_in_backend', 101);
+
+
+//enabling in backend
+function wah_in_backend()
+{
+    $enable_wah_in_backend = carbon_get_theme_option('wah_backend');
+    if ($enable_wah_in_backend) {
+        // add_action('admin_footer', 'wah_container', 100);
+        //load in admin
+        // add_action('admin_init', 'wah_container');
+    }
+}
+// add_action('init', 'wah_in_backend');
+
+
+
 
 
 

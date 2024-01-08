@@ -11,9 +11,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
             jQuery('#wah-call-prism-creator-tool').click(function () {
                 var $wahPrism = jQuery('#wah-prism');
                 $wahPrism.slideDown();
-                jQuery('#wah-main-container').slideUp();
-                jQuery('#tools-main-container').slideUp();
-                jQuery('#wah-trigger').slideUp();
+                // jQuery('#wah-main-container').slideUp();
+                // jQuery('#tools-main-container').slideUp();
+                // jQuery('#wah-trigger').slideUp();
             });
         }
         wahCallPrismCreatorTool();
@@ -69,10 +69,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
         function wahCallContentFormater() {
             jQuery('#wah-call-content-formater').click(function () {
                 var $wahContentFormater = jQuery('#wah-content-formater');
-                $wahContentFormater.slideDown(); // temporary
-                jQuery('#wah-main-container').slideUp();
-                jQuery('#tools-main-container').slideUp();
-                jQuery('#wah-trigger').slideUp();
+                $wahContentFormater.slideDown();
+                // jQuery('#wah-main-container').slideUp();
+                // jQuery('#tools-main-container').slideUp();
+                // jQuery('#wah-trigger').slideUp();
             });
         }
 

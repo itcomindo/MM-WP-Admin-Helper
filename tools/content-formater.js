@@ -1,6 +1,8 @@
 window.addEventListener('DOMContentLoaded', (event) => {
     jQuery(function ($) {
 
+        jQuery('#wah-prism').draggable();
+
         function wahDragAble() {
             jQuery(function ($) {
                 var elem = $('.wah-tools-wr');

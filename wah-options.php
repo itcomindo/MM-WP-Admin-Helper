@@ -17,6 +17,16 @@ function wah_register_options_fields()
 
     Container::make('theme_options', 'Admin Helper')
         ->add_fields([
+
+
+            //backend
+            Field::make('checkbox', 'wah_backend', 'Enable in Backend')
+                ->set_width(30)
+                ->set_option_value('yes')
+                ->set_default_value(true),
+
+
+
             //post
             Field::make('checkbox', 'wah_post', 'Post')
                 ->set_width(30)

@@ -48,6 +48,16 @@ function mm_load_files_for_admin()
 
 
 
+//enabling in backend
+function wah_load_css_js_in_backend()
+{
+    $enable_wah_in_backend = carbon_get_theme_option('wah_backend');
+    if ($enable_wah_in_backend) {
+        add_action('admin_enqueue_scripts', 'wah_load_css_js', 100);
+    }
+}
+add_action('init', 'wah_load_css_js_in_backend');
+
 
 
 

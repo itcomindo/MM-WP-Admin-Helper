@@ -53,3 +53,13 @@ function wah_content_formater_tool()
 <?php
 }
 add_action('wp_footer', 'wah_content_formater_tool', 100);
+// add_action('admin_footer', 'wah_content_formater_tool');
+
+function wah_content_formater_tool_in_backend()
+{
+    $enable_wah_in_backend = carbon_get_theme_option('wah_backend');
+    if ($enable_wah_in_backend) {
+        add_action('admin_footer', 'wah_content_formater_tool', 100);
+    }
+}
+add_action('init', 'wah_content_formater_tool_in_backend', 101);
